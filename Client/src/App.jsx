@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useAuth, useUser } from "@clerk/clerk-react";
 
 import Home from "./Components/Home";
-import Books from "./Components/Books";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Login from "./Auth/Login";
 
@@ -72,7 +71,6 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/books" element={<ProtectedRoute><Books /></ProtectedRoute>} />
         <Route path="/upload" element={<ProtectedRoute><Upload /></ProtectedRoute>} />
         <Route path="/lib" element={<ProtectedRoute><Library /></ProtectedRoute>} />
         <Route path="/health" element={<ProtectedRoute><Health /></ProtectedRoute>} />
