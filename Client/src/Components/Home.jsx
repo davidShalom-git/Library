@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useScroll, motion, useTransform } from 'framer-motion'
-import Navbar from './Navbar'
+
 import Read from '../assets/Read.png'
 import Learn from '../assets/Knowledge.png'
 import Share from '../assets/Share.jpg'
+import Navbar from './Navbar'
 
 const Home = () => {
   const [text, setText] = useState('')
