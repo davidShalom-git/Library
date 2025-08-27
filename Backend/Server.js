@@ -17,7 +17,7 @@ app.use(cors({
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
-app.use(ClerkExpressWithAuth({}));
+app.use(ClerkExpressWithAuth());
 
 app.get('/health', (req, res) => {
   res.json({
@@ -31,11 +31,15 @@ app.get('/health', (req, res) => {
   });
 });
 
-mongoose.connect(process.env.MONGODB_URI).then((res)=>{
-  console.log('Connected to MongoDB',res);
-}).catch((error) => {
-  console.error('❌ MongoDB connection error:', error);
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 })
+  .then(() => console.log('✅ Connected to MongoDB'))
+  .catch((err) => {
+    console.error('❌ MongoDB connection error:', err);
+    process.exit(1);
+  });
 
 app.use('/api/user', User);
 app.use('/api/books', UserBooks);
