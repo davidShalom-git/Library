@@ -20,28 +20,11 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(ClerkExpressWithAuth());
 
-app.get('/health', (req, res) => {
-  res.json({
-    status: 'OK',
-    timestamp: new Date().toISOString(),
-    environment: {
-      nodeEnv: process.env.NODE_ENV,
-      clerkConfigured: !!process.env.CLERK_SECRET_KEY,
-      mongoConfigured: !!process.env.MONGODB_URI,
-      cloudinaryConfigured: !!process.env.CLOUDINARY_CLOUD_NAME
-    }
-  });
-});
-
-// Add this simple test endpoint
-app.get('/test', (req, res) => {
-  res.json({ message: 'Backend is working!' });
-});
-
-mongoose.connect(process.env.MONGODB_URI,).then(() => console.log('✅ Connected to MongoDB')).catch((err) => {
+mongoose.connect(process.env.MONGODB_URI).then(() => console.log('✅ Connected to MongoDB')).catch((err) => {
   console.error('❌ MongoDB connection error:', err);
 
 });
+
 
 app.use('/api/user', User);
 app.use('/api/books', UserBooks);
