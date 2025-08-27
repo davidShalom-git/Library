@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import Read from '../assets/Read.png'
 import Learn from '../assets/Knowledge.png'
 import Share from '../assets/Share.jpg'
-import Navbar from '../Components/Navbar'
 import sample1 from '../assets/sample1.pdf'
 import sample2 from '../assets/sample2.pdf'
 import sample3 from '../assets/sample3.pdf'
@@ -15,6 +14,7 @@ import { zoomPlugin } from '@react-pdf-viewer/zoom'
 import '@react-pdf-viewer/core/lib/styles/index.css'
 import '@react-pdf-viewer/page-navigation/lib/styles/index.css'
 import '@react-pdf-viewer/zoom/lib/styles/index.css'
+import Navbar from '../Components/Navbar'
 
 const Science = () => {
   const [hoveredCard, setHoveredCard] = useState(null)
