@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 
+
 const About = () => {
   const [text, setText] = useState('');
   const fullText = "David Shalom";
