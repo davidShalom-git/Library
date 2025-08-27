@@ -45,7 +45,7 @@ export default function App() {
           lastName: user.lastName,
         };
 
-        const response = await fetch("http://localhost:3200/api/user/save", {
+        const response = await fetch("https://library-five-jade.vercel.app/api/user/save", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

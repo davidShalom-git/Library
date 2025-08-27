@@ -24,7 +24,7 @@ const Dashboard = () => {
         setLoading(true)
 
         const token = await getToken()
-        const response = await fetch('http://localhost:3200/api/books/my-post', {
+        const response = await fetch('https://library-five-jade.vercel.app/api/books/my-post', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const Dashboard = () => {
   const handleDelete = async (bookId) => {
     try {
       const token = await getToken()
-      const response = await fetch(`http://localhost:3200/api/books/delete/${bookId}`, {
+      const response = await fetch(`https://library-five-jade.vercel.app/api/books/delete/${bookId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

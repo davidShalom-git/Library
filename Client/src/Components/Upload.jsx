@@ -99,7 +99,7 @@ const Upload = () => {
       formDataToSend.append('coverImage', coverImage);
 
  
-      const response = await fetch('http://localhost:3200/api/books/post', {
+      const response = await fetch('https://library-five-jade.vercel.app/api/books/post', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
