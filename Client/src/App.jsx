@@ -44,7 +44,7 @@ export default function App() {
           lastName: user.lastName,
         };
 
-        const response = await fetch("https://library-five-jade.vercel.app/api/user/save", {
+        const response = await fetch("https://library-3hxq.vercel.app/api/user/save", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
