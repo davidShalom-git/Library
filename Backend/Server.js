@@ -13,6 +13,7 @@ app.use(cors({
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-requested-with'],
+  optionsSuccessStatus: 200
 }));
 
 app.use(express.json({ limit: '10mb' }));
@@ -26,9 +27,15 @@ app.get('/health', (req, res) => {
     environment: {
       nodeEnv: process.env.NODE_ENV,
       clerkConfigured: !!process.env.CLERK_SECRET_KEY,
-      mongoConfigured: !!process.env.MONGODB_URI
+      mongoConfigured: !!process.env.MONGODB_URI,
+      cloudinaryConfigured: !!process.env.CLOUDINARY_CLOUD_NAME
     }
   });
+});
+
+// Add this simple test endpoint
+app.get('/test', (req, res) => {
+  res.json({ message: 'Backend is working!' });
 });
 
 mongoose.connect(process.env.MONGODB_URI, {
