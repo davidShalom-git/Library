@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 
 
-
-
 const UserBooks = () => {
   const [books, setBooks] = useState([])
   const [pdfModalOpen, setPdfModalOpen] = useState(false)
