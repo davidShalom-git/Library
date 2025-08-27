@@ -1,11 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import Navbar from './Navbar'
+import Nav from './Nav'
 
 
 
 const Library = () => {
+
     const departments = [
         {
             title: 'Entertainment',
@@ -85,7 +86,7 @@ const Library = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white relative overflow-hidden">
-            <Navbar />
+            <Nav />
 
             {/* Enhanced background effects */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black_40%,transparent_100%)]"></div>

@@ -5,7 +5,7 @@ import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout'
 import '@react-pdf-viewer/core/lib/styles/index.css'
 import '@react-pdf-viewer/default-layout/lib/styles/index.css'
 import { Link } from 'react-router-dom'
-import Navbar from './Navbar'
+import Nav from './Nav'
 
 
 const UserBooks = () => {
@@ -92,7 +92,7 @@ const UserBooks = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white relative overflow-hidden">
-        <Navbar />
+        <Nav />
 
         <div className="relative z-10 mt-32 container mx-auto px-4 py-8 text-center">
           <motion.h1

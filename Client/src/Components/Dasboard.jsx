@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-
-import { motion } from 'framer-motion'
 import { Worker, Viewer } from '@react-pdf-viewer/core'
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout'
 import '@react-pdf-viewer/core/lib/styles/index.css'
 import '@react-pdf-viewer/default-layout/lib/styles/index.css'
 import { useAuth } from '@clerk/clerk-react'
-import Navbar from './Navbar'
+import Nav from './Nav'
+
 
 
 const Dashboard = () => {
@@ -95,7 +94,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white">
       {/* Navbar */}
-      <Navbar />
+      <Nav />
 
       {/* Background Effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">

@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+import Nav from "./Nav";
+
 
 
 
@@ -112,7 +113,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white relative overflow-hidden">
-      <Navbar />
+      <Nav />
   
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
     

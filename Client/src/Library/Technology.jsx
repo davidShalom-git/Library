@@ -6,15 +6,13 @@ import Share from '../assets/Share.jpg'
 import sample1 from '../assets/sample1.pdf'
 import sample2 from '../assets/sample2.pdf'
 import sample3 from '../assets/sample3.pdf'
-
-// react-pdf viewer
 import { Worker, Viewer } from '@react-pdf-viewer/core'
 import { pageNavigationPlugin } from '@react-pdf-viewer/page-navigation'
 import { zoomPlugin } from '@react-pdf-viewer/zoom'
 import '@react-pdf-viewer/core/lib/styles/index.css'
 import '@react-pdf-viewer/page-navigation/lib/styles/index.css'
 import '@react-pdf-viewer/zoom/lib/styles/index.css'
-import Navbar from '../Components/Navbar'
+import Nav from '../Components/Nav'
 
 const Technology = () => {
   const [hoveredCard, setHoveredCard] = useState(null)
@@ -169,7 +167,7 @@ const Technology = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white relative overflow-hidden">
-        <Navbar />
+        <Nav />
 
         {/* background animations */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black_40%,transparent_100%)]"></div>

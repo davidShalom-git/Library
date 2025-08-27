@@ -3,7 +3,8 @@ import { useScroll, motion, useTransform } from 'framer-motion'
 import Read from '../assets/Read.png'
 import Learn from '../assets/Knowledge.png'
 import Share from '../assets/Share.jpg'
-import Navbar from './Navbar'
+import Nav from './Nav'
+
 
 
 const Home = () => {
@@ -84,7 +85,7 @@ const Home = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white relative overflow-hidden">
-        <Navbar />
+        <Nav />
 
         {/* Enhanced background effects */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">

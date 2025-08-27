@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SignInButton, useAuth, UserButton } from '@clerk/clerk-react';
 import { Link, useLocation } from 'react-router-dom';
 
-const Navbar = () => {
+const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const { isSignedIn } = useAuth();
@@ -130,4 +130,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Nav;
