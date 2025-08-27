@@ -63,7 +63,7 @@ const Nav = () => {
           ) : (
             <div className="hover:scale-105 transition-transform duration-200">
               <SignInButton>
-                <button className="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 border border-purple-500/20">
+                <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 border border-purple-500/20">
                   Sign In
                 </button>
               </SignInButton>
