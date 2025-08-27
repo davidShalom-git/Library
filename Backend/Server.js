@@ -9,7 +9,7 @@ const User = require('./routes/Auth');
 const UserBooks = require('./routes/UserBooks');
 
 app.use(cors({
-  origin: ['http://localhost:2200', 'http://localhost:3000', 'https://your-frontend-domain.vercel.app'],
+  origin: ['http://localhost:2200', 'http://localhost:3000', 'https://library-2025.vercel.app'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-requested-with'],
