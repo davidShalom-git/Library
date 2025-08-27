@@ -48,8 +48,8 @@ const Nav = () => {
           ))}
         </ul>
 
-        {/* Enhanced Right Section */}
-        <div className="flex items-center gap-4">
+        {/* Enhanced Right Section - HIDDEN ON MOBILE */}
+        <div className="hidden md:flex items-center gap-4">
           {isSignedIn ? (
             <div className="hover:scale-105 transition-transform duration-200">
               <UserButton 
@@ -69,22 +69,22 @@ const Nav = () => {
               </SignInButton>
             </div>
           )}
-          
-          {/* Enhanced Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-200"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle Menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
         </div>
+
+        {/* Enhanced Mobile Menu Button */}
+        <button
+          className="md:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-200"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle Menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {menuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
 
       {/* Enhanced Mobile Nav Slide-In */}
@@ -113,12 +113,18 @@ const Nav = () => {
           {/* Mobile Auth Section */}
           <li className="w-full text-center pt-4 border-t border-white/10 mx-4">
             {isSignedIn ? (
-              <div className="flex justify-center">
-                <UserButton />
+              <div className="flex justify-center hover:scale-105 transition-transform duration-200">
+                <UserButton 
+                  appearance={{
+                    elements: {
+                      avatarBox: "w-10 h-10 rounded-full ring-2 ring-purple-400/50 hover:ring-purple-400 transition-all"
+                    }
+                  }}
+                />
               </div>
             ) : (
               <SignInButton>
-                <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg">
+                <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25">
                   Sign In
                 </button>
               </SignInButton>
